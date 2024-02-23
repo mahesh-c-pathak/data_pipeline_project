@@ -1,0 +1,61 @@
+[2024-02-23 12:34:18,433] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: kafka_stream.virtualenv_python manual__2024-02-23T12:27:11.553888+00:00 [queued]>
+[2024-02-23 12:34:18,444] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: kafka_stream.virtualenv_python manual__2024-02-23T12:27:11.553888+00:00 [queued]>
+[2024-02-23 12:34:18,444] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 12:34:18,444] {taskinstance.py:1239} INFO - Starting attempt 2 of 2
+[2024-02-23 12:34:18,445] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 12:34:18,466] {taskinstance.py:1259} INFO - Executing <Task(PythonVirtualenvOperator): virtualenv_python> on 2024-02-23 12:27:11.553888+00:00
+[2024-02-23 12:34:18,476] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'kafka_stream', 'virtualenv_python', 'manual__2024-02-23T12:27:11.553888+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream.py', '--cfg-path', '/tmp/tmp2bank09l', '--error-file', '/tmp/tmp8aborw5a']
+[2024-02-23 12:34:18,476] {standard_task_runner.py:77} INFO - Job 23: Subtask virtualenv_python
+[2024-02-23 12:34:18,473] {standard_task_runner.py:52} INFO - Started process 898 to run task
+[2024-02-23 12:34:18,553] {logging_mixin.py:109} INFO - Running <TaskInstance: kafka_stream.virtualenv_python manual__2024-02-23T12:27:11.553888+00:00 [running]> on host 70c1bf2bd46a
+[2024-02-23 12:34:18,622] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=mahesh@somemail.com
+AIRFLOW_CTX_DAG_OWNER=Mahesh Pathak
+AIRFLOW_CTX_DAG_ID=kafka_stream
+AIRFLOW_CTX_TASK_ID=virtualenv_python
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-23T12:27:11.553888+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-23T12:27:11.553888+00:00
+[2024-02-23 12:34:18,624] {process_utils.py:160} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvcphaclcz
+[2024-02-23 12:34:18,654] {process_utils.py:164} INFO - Output:
+[2024-02-23 12:34:19,324] {process_utils.py:168} INFO - created virtual environment CPython3.6.15.final.0-64 in 382ms
+[2024-02-23 12:34:19,324] {process_utils.py:168} INFO -   creator CPython3Posix(dest=/tmp/venvcphaclcz, clear=False, no_vcs_ignore=False, global=False)
+[2024-02-23 12:34:19,325] {process_utils.py:168} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-02-23 12:34:19,325] {process_utils.py:168} INFO -     added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+[2024-02-23 12:34:19,326] {process_utils.py:168} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-02-23 12:34:19,347] {process_utils.py:160} INFO - Executing cmd: /tmp/venvcphaclcz/bin/pip install Faker kafka-python
+[2024-02-23 12:34:19,359] {process_utils.py:164} INFO - Output:
+[2024-02-23 12:34:21,328] {process_utils.py:168} INFO - Collecting Faker
+[2024-02-23 12:34:21,336] {process_utils.py:168} INFO -   Using cached Faker-14.2.1-py3-none-any.whl (1.6 MB)
+[2024-02-23 12:34:21,453] {process_utils.py:168} INFO - Collecting kafka-python
+[2024-02-23 12:34:21,456] {process_utils.py:168} INFO -   Using cached kafka_python-2.0.2-py2.py3-none-any.whl (246 kB)
+[2024-02-23 12:34:21,566] {process_utils.py:168} INFO - Collecting python-dateutil>=2.4
+[2024-02-23 12:34:21,569] {process_utils.py:168} INFO -   Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[2024-02-23 12:34:21,683] {process_utils.py:168} INFO - Collecting typing-extensions>=3.7.4.3
+[2024-02-23 12:34:21,685] {process_utils.py:168} INFO -   Using cached typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+[2024-02-23 12:34:21,803] {process_utils.py:168} INFO - Collecting six>=1.5
+[2024-02-23 12:34:21,804] {process_utils.py:168} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-02-23 12:34:21,903] {process_utils.py:168} INFO - Installing collected packages: six, typing-extensions, python-dateutil, kafka-python, Faker
+[2024-02-23 12:34:23,554] {process_utils.py:168} INFO - Successfully installed Faker-14.2.1 kafka-python-2.0.2 python-dateutil-2.8.2 six-1.16.0 typing-extensions-4.1.1
+[2024-02-23 12:34:24,063] {process_utils.py:160} INFO - Executing cmd: /tmp/venvcphaclcz/bin/python /tmp/venvcphaclcz/script.py /tmp/venvcphaclcz/script.in /tmp/venvcphaclcz/script.out /tmp/venvcphaclcz/string_args.txt
+[2024-02-23 12:34:24,075] {process_utils.py:164} INFO - Output:
+[2024-02-23 12:35:25,405] {process_utils.py:168} INFO - {'name': 'Samantha Jones', 'address': '485 Vicki Expressway Apt. 844\nHernandezport, AK 54481', 'created_at': '2009'}
+[2024-02-23 12:35:25,406] {process_utils.py:168} INFO - {'name': 'Richard James', 'address': '81736 Hughes Park\nPort Michelle, CO 81417', 'created_at': '1976'}
+[2024-02-23 12:35:25,406] {process_utils.py:168} INFO - {'name': 'Kelly Cooper', 'address': '83781 Potter Throughway\nLake Paul, FL 30168', 'created_at': '2014'}
+[2024-02-23 12:35:25,407] {process_utils.py:168} INFO - {'name': 'Adam Brown', 'address': '402 Jessica Camp\nPoncehaven, NJ 68103', 'created_at': '1994'}
+[2024-02-23 12:35:25,407] {process_utils.py:168} INFO - {'name': 'Joy Allen', 'address': '534 Munoz Shore\nMercedesfort, MO 09119', 'created_at': '2007'}
+[2024-02-23 12:35:25,408] {process_utils.py:168} INFO - {'name': 'Scott Nunez', 'address': '302 Harrison Key\nBestfurt, TX 36981', 'created_at': '1974'}
+[2024-02-23 12:35:25,408] {process_utils.py:168} INFO - {'name': 'Matthew Solis', 'address': '20098 Cassandra Route\nNew Brianside, MA 96829', 'created_at': '1999'}
+[2024-02-23 12:35:25,410] {process_utils.py:168} INFO - {'name': 'Timothy Williams', 'address': '0580 William Expressway\nWest Randytown, WI 51174', 'created_at': '1982'}
+[2024-02-23 12:35:25,411] {process_utils.py:168} INFO - {'name': 'Victoria Huynh', 'address': '29418 John View Suite 130\nBrianchester, CA 45303', 'created_at': '1992'}
+[2024-02-23 12:35:25,411] {process_utils.py:168} INFO - {'name': 'Erica Hunter', 'address': '22154 Robles Gardens Apt. 057\nNew Erica, CA 19809', 'created_at': '1972'}
+[2024-02-23 12:35:25,412] {process_utils.py:168} INFO - {'name': 'Samuel Mercado', 'address': '93072 James Island\nThorntonchester, MO 28747', 'created_at': '1974'}
+[2024-02-23 12:35:25,413] {process_utils.py:168} INFO - {'name': 'Mark Nichols', 'address': '3388 Ricky Port\nNorth Jennifer, WV 91174', 'created_at': '2000'}
+[2024-02-23 12:35:25,414] {process_utils.py:168} INFO - {'name': 'Carrie Fisher', 'address': '29143 Joseph Mount\nPort Carlos, MO 62262', 'created_at': '2012'}
+[2024-02-23 12:35:25,414] {process_utils.py:168} INFO - {'name': 'Chad Barnett', 'address': 'USNS Burnett\nFPO AA 59752', 'created_at': '2015'}
+[2024-02-23 12:35:25,418] {process_utils.py:168} INFO - {'name': 'Kevin Mason', 'address': '842 Lisa Ramp\nSmithborough, MN 25586', 'created_at': '1979'}
+[2024-02-23 12:35:25,836] {python.py:175} INFO - Done. Returned value was: None
+[2024-02-23 12:35:25,866] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=kafka_stream, task_id=virtualenv_python, execution_date=20240223T122711, start_date=20240223T123418, end_date=20240223T123525
+[2024-02-23 12:35:25,945] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-02-23 12:35:26,033] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

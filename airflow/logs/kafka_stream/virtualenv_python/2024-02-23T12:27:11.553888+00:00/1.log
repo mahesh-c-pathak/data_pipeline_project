@@ -1,0 +1,211 @@
+[2024-02-23 12:27:14,116] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: kafka_stream.virtualenv_python manual__2024-02-23T12:27:11.553888+00:00 [queued]>
+[2024-02-23 12:27:14,124] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: kafka_stream.virtualenv_python manual__2024-02-23T12:27:11.553888+00:00 [queued]>
+[2024-02-23 12:27:14,124] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 12:27:14,124] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2024-02-23 12:27:14,125] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 12:27:14,139] {taskinstance.py:1259} INFO - Executing <Task(PythonVirtualenvOperator): virtualenv_python> on 2024-02-23 12:27:11.553888+00:00
+[2024-02-23 12:27:14,149] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'kafka_stream', 'virtualenv_python', 'manual__2024-02-23T12:27:11.553888+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream.py', '--cfg-path', '/tmp/tmpnsqfb645', '--error-file', '/tmp/tmpi12xkq1c']
+[2024-02-23 12:27:14,150] {standard_task_runner.py:77} INFO - Job 22: Subtask virtualenv_python
+[2024-02-23 12:27:14,145] {standard_task_runner.py:52} INFO - Started process 530 to run task
+[2024-02-23 12:27:14,196] {logging_mixin.py:109} INFO - Running <TaskInstance: kafka_stream.virtualenv_python manual__2024-02-23T12:27:11.553888+00:00 [running]> on host 70c1bf2bd46a
+[2024-02-23 12:27:14,243] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=mahesh@somemail.com
+AIRFLOW_CTX_DAG_OWNER=Mahesh Pathak
+AIRFLOW_CTX_DAG_ID=kafka_stream
+AIRFLOW_CTX_TASK_ID=virtualenv_python
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-23T12:27:11.553888+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-23T12:27:11.553888+00:00
+[2024-02-23 12:27:14,244] {process_utils.py:160} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venv25jow7bn
+[2024-02-23 12:27:14,254] {process_utils.py:164} INFO - Output:
+[2024-02-23 12:27:16,296] {process_utils.py:168} INFO - created virtual environment CPython3.6.15.final.0-64 in 1291ms
+[2024-02-23 12:27:16,299] {process_utils.py:168} INFO -   creator CPython3Posix(dest=/tmp/venv25jow7bn, clear=False, no_vcs_ignore=False, global=False)
+[2024-02-23 12:27:16,301] {process_utils.py:168} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-02-23 12:27:16,302] {process_utils.py:168} INFO -     added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+[2024-02-23 12:27:16,303] {process_utils.py:168} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-02-23 12:27:16,404] {process_utils.py:160} INFO - Executing cmd: /tmp/venv25jow7bn/bin/pip install Faker kafka-python
+[2024-02-23 12:27:16,443] {process_utils.py:164} INFO - Output:
+[2024-02-23 12:27:24,008] {process_utils.py:168} INFO - Collecting Faker
+[2024-02-23 12:27:24,197] {process_utils.py:168} INFO -   Downloading Faker-14.2.1-py3-none-any.whl (1.6 MB)
+[2024-02-23 12:27:24,785] {process_utils.py:168} INFO - Collecting kafka-python
+[2024-02-23 12:27:24,864] {process_utils.py:168} INFO -   Downloading kafka_python-2.0.2-py2.py3-none-any.whl (246 kB)
+[2024-02-23 12:27:25,153] {process_utils.py:168} INFO - Collecting python-dateutil>=2.4
+[2024-02-23 12:27:25,212] {process_utils.py:168} INFO -   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[2024-02-23 12:27:25,504] {process_utils.py:168} INFO - Collecting typing-extensions>=3.7.4.3
+[2024-02-23 12:27:25,574] {process_utils.py:168} INFO -   Downloading typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+[2024-02-23 12:27:25,801] {process_utils.py:168} INFO - Collecting six>=1.5
+[2024-02-23 12:27:25,875] {process_utils.py:168} INFO -   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-02-23 12:27:26,114] {process_utils.py:168} INFO - Installing collected packages: six, typing-extensions, python-dateutil, kafka-python, Faker
+[2024-02-23 12:27:28,833] {process_utils.py:168} INFO - Successfully installed Faker-14.2.1 kafka-python-2.0.2 python-dateutil-2.8.2 six-1.16.0 typing-extensions-4.1.1
+[2024-02-23 12:27:29,211] {process_utils.py:160} INFO - Executing cmd: /tmp/venv25jow7bn/bin/python /tmp/venv25jow7bn/script.py /tmp/venv25jow7bn/script.in /tmp/venv25jow7bn/script.out /tmp/venv25jow7bn/string_args.txt
+[2024-02-23 12:27:29,220] {process_utils.py:164} INFO - Output:
+[2024-02-23 12:27:29,393] {process_utils.py:168} INFO - Traceback (most recent call last):
+[2024-02-23 12:27:29,393] {process_utils.py:168} INFO -   File "/tmp/venv25jow7bn/script.py", line 50, in <module>
+[2024-02-23 12:27:29,394] {process_utils.py:168} INFO -     res = stream_data(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-02-23 12:27:29,394] {process_utils.py:168} INFO -   File "/tmp/venv25jow7bn/script.py", line 26, in stream_data
+[2024-02-23 12:27:29,394] {process_utils.py:168} INFO -     from data import get_registerd_user
+[2024-02-23 12:27:29,394] {process_utils.py:168} INFO - ModuleNotFoundError: No module named 'data'
+[2024-02-23 12:27:29,606] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 393, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 432, in execute_callable
+    string_args_filename,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv25jow7bn/bin/python', '/tmp/venv25jow7bn/script.py', '/tmp/venv25jow7bn/script.in', '/tmp/venv25jow7bn/script.out', '/tmp/venv25jow7bn/string_args.txt']' returned non-zero exit status 1.
+[2024-02-23 12:27:29,618] {taskinstance.py:1277} INFO - Marking task as UP_FOR_RETRY. dag_id=kafka_stream, task_id=virtualenv_python, execution_date=20240223T122711, start_date=20240223T122714, end_date=20240223T122729
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,623] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,624] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,624] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,624] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,624] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,624] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 12:27:29,633] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/email.py:102: PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-02-23 12:27:29,634] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-02-23 12:27:29,634] {email.py:208} INFO - Email alerting: attempt 1
+[2024-02-23 12:27:29,640] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-02-23 12:27:29,641] {email.py:208} INFO - Email alerting: attempt 1
+[2024-02-23 12:27:29,641] {taskinstance.py:1751} ERROR - Failed to send email to: ['mahesh@somemail.com']
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 393, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 432, in execute_callable
+    string_args_filename,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv25jow7bn/bin/python', '/tmp/venv25jow7bn/script.py', '/tmp/venv25jow7bn/script.in', '/tmp/venv25jow7bn/script.out', '/tmp/venv25jow7bn/string_args.txt']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 2093, in email_alert
+    send_email(self.task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 66, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 102, in send_email_smtp
+    send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 210, in send_mime_email
+    conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 244, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.6/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1749, in handle_failure
+    self.email_alert(error)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 2095, in email_alert
+    send_email(self.task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 66, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 102, in send_email_smtp
+    send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 210, in send_mime_email
+    conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 244, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.6/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+[2024-02-23 12:27:29,670] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task virtualenv_python
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 393, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 432, in execute_callable
+    string_args_filename,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv25jow7bn/bin/python', '/tmp/venv25jow7bn/script.py', '/tmp/venv25jow7bn/script.in', '/tmp/venv25jow7bn/script.out', '/tmp/venv25jow7bn/string_args.txt']' returned non-zero exit status 1.
+[2024-02-23 12:27:29,709] {local_task_job.py:154} INFO - Task exited with return code 1
+[2024-02-23 12:27:29,736] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
