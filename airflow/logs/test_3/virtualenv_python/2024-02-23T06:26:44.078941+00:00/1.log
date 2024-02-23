@@ -1,0 +1,46 @@
+[2024-02-23 06:26:47,488] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: test_3.virtualenv_python manual__2024-02-23T06:26:44.078941+00:00 [queued]>
+[2024-02-23 06:26:47,496] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: test_3.virtualenv_python manual__2024-02-23T06:26:44.078941+00:00 [queued]>
+[2024-02-23 06:26:47,496] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 06:26:47,496] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2024-02-23 06:26:47,496] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 06:26:47,510] {taskinstance.py:1259} INFO - Executing <Task(PythonVirtualenvOperator): virtualenv_python> on 2024-02-23 06:26:44.078941+00:00
+[2024-02-23 06:26:47,518] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'test_3', 'virtualenv_python', 'manual__2024-02-23T06:26:44.078941+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/test_3.py', '--cfg-path', '/tmp/tmph3d8yaew', '--error-file', '/tmp/tmptpvc2_f5']
+[2024-02-23 06:26:47,519] {standard_task_runner.py:77} INFO - Job 14: Subtask virtualenv_python
+[2024-02-23 06:26:47,515] {standard_task_runner.py:52} INFO - Started process 6387 to run task
+[2024-02-23 06:26:47,562] {logging_mixin.py:109} INFO - Running <TaskInstance: test_3.virtualenv_python manual__2024-02-23T06:26:44.078941+00:00 [running]> on host 5bc013e1bfce
+[2024-02-23 06:26:47,612] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=mahesh@somemail.com
+AIRFLOW_CTX_DAG_OWNER=Mahesh Pathak
+AIRFLOW_CTX_DAG_ID=test_3
+AIRFLOW_CTX_TASK_ID=virtualenv_python
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-23T06:26:44.078941+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-23T06:26:44.078941+00:00
+[2024-02-23 06:26:47,613] {process_utils.py:160} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venv2yeoa7pe
+[2024-02-23 06:26:47,622] {process_utils.py:164} INFO - Output:
+[2024-02-23 06:26:47,992] {process_utils.py:168} INFO - created virtual environment CPython3.6.15.final.0-64 in 220ms
+[2024-02-23 06:26:47,993] {process_utils.py:168} INFO -   creator CPython3Posix(dest=/tmp/venv2yeoa7pe, clear=False, no_vcs_ignore=False, global=False)
+[2024-02-23 06:26:47,993] {process_utils.py:168} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-02-23 06:26:47,993] {process_utils.py:168} INFO -     added seed packages: pip==21.3.1, setuptools==59.6.0, wheel==0.37.1
+[2024-02-23 06:26:47,993] {process_utils.py:168} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-02-23 06:26:48,008] {process_utils.py:160} INFO - Executing cmd: /tmp/venv2yeoa7pe/bin/pip install Faker
+[2024-02-23 06:26:48,016] {process_utils.py:164} INFO - Output:
+[2024-02-23 06:26:49,514] {process_utils.py:168} INFO - Collecting Faker
+[2024-02-23 06:26:49,521] {process_utils.py:168} INFO -   Using cached Faker-14.2.1-py3-none-any.whl (1.6 MB)
+[2024-02-23 06:26:49,640] {process_utils.py:168} INFO - Collecting python-dateutil>=2.4
+[2024-02-23 06:26:49,643] {process_utils.py:168} INFO -   Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[2024-02-23 06:26:49,758] {process_utils.py:168} INFO - Collecting typing-extensions>=3.7.4.3
+[2024-02-23 06:26:49,760] {process_utils.py:168} INFO -   Using cached typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+[2024-02-23 06:26:49,858] {process_utils.py:168} INFO - Collecting six>=1.5
+[2024-02-23 06:26:49,861] {process_utils.py:168} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-02-23 06:26:49,912] {process_utils.py:168} INFO - Installing collected packages: six, typing-extensions, python-dateutil, Faker
+[2024-02-23 06:26:51,225] {process_utils.py:168} INFO - Successfully installed Faker-14.2.1 python-dateutil-2.8.2 six-1.16.0 typing-extensions-4.1.1
+[2024-02-23 06:26:51,615] {process_utils.py:160} INFO - Executing cmd: /tmp/venv2yeoa7pe/bin/python /tmp/venv2yeoa7pe/script.py /tmp/venv2yeoa7pe/script.in /tmp/venv2yeoa7pe/script.out /tmp/venv2yeoa7pe/string_args.txt
+[2024-02-23 06:26:51,638] {process_utils.py:164} INFO - Output:
+[2024-02-23 06:26:51,878] {process_utils.py:168} INFO - Joshua Jordan
+[2024-02-23 06:26:51,878] {process_utils.py:168} INFO - Finished
+[2024-02-23 06:26:52,064] {python.py:175} INFO - Done. Returned value was: None
+[2024-02-23 06:26:52,076] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=test_3, task_id=virtualenv_python, execution_date=20240223T062644, start_date=20240223T062647, end_date=20240223T062652
+[2024-02-23 06:26:52,138] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-02-23 06:26:52,192] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

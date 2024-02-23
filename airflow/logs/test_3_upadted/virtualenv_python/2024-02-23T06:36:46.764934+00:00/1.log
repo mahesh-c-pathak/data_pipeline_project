@@ -1,0 +1,51 @@
+[2024-02-23 06:36:48,318] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: test_3_upadted.virtualenv_python manual__2024-02-23T06:36:46.764934+00:00 [queued]>
+[2024-02-23 06:36:48,324] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: test_3_upadted.virtualenv_python manual__2024-02-23T06:36:46.764934+00:00 [queued]>
+[2024-02-23 06:36:48,324] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 06:36:48,325] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2024-02-23 06:36:48,325] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 06:36:48,338] {taskinstance.py:1259} INFO - Executing <Task(PythonVirtualenvOperator): virtualenv_python> on 2024-02-23 06:36:46.764934+00:00
+[2024-02-23 06:36:48,346] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'test_3_upadted', 'virtualenv_python', 'manual__2024-02-23T06:36:46.764934+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/test_3.py', '--cfg-path', '/tmp/tmpf7jk9zlu', '--error-file', '/tmp/tmpnl6ucszf']
+[2024-02-23 06:36:48,346] {standard_task_runner.py:77} INFO - Job 18: Subtask virtualenv_python
+[2024-02-23 06:36:48,343] {standard_task_runner.py:52} INFO - Started process 6897 to run task
+[2024-02-23 06:36:48,394] {logging_mixin.py:109} INFO - Running <TaskInstance: test_3_upadted.virtualenv_python manual__2024-02-23T06:36:46.764934+00:00 [running]> on host 5bc013e1bfce
+[2024-02-23 06:36:48,446] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=mahesh@somemail.com
+AIRFLOW_CTX_DAG_OWNER=Mahesh Pathak
+AIRFLOW_CTX_DAG_ID=test_3_upadted
+AIRFLOW_CTX_TASK_ID=virtualenv_python
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-23T06:36:46.764934+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-23T06:36:46.764934+00:00
+[2024-02-23 06:36:48,447] {process_utils.py:160} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvp_cracgr
+[2024-02-23 06:36:48,456] {process_utils.py:164} INFO - Output:
+[2024-02-23 06:36:48,851] {process_utils.py:168} INFO - created virtual environment CPython3.6.15.final.0-64 in 228ms
+[2024-02-23 06:36:48,852] {process_utils.py:168} INFO -   creator CPython3Posix(dest=/tmp/venvp_cracgr, clear=False, no_vcs_ignore=False, global=False)
+[2024-02-23 06:36:48,852] {process_utils.py:168} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-02-23 06:36:48,852] {process_utils.py:168} INFO -     added seed packages: pip==21.3.1, setuptools==59.6.0, wheel==0.37.1
+[2024-02-23 06:36:48,853] {process_utils.py:168} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-02-23 06:36:48,868] {process_utils.py:160} INFO - Executing cmd: /tmp/venvp_cracgr/bin/pip install Faker kafka-python
+[2024-02-23 06:36:48,876] {process_utils.py:164} INFO - Output:
+[2024-02-23 06:36:51,130] {process_utils.py:168} INFO - Collecting Faker
+[2024-02-23 06:36:51,141] {process_utils.py:168} INFO -   Using cached Faker-14.2.1-py3-none-any.whl (1.6 MB)
+[2024-02-23 06:36:51,293] {process_utils.py:168} INFO - Collecting kafka-python
+[2024-02-23 06:36:51,479] {process_utils.py:168} INFO -   Downloading kafka_python-2.0.2-py2.py3-none-any.whl (246 kB)
+[2024-02-23 06:36:51,789] {process_utils.py:168} INFO - Collecting python-dateutil>=2.4
+[2024-02-23 06:36:51,789] {process_utils.py:168} INFO -   Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[2024-02-23 06:36:51,918] {process_utils.py:168} INFO - Collecting typing-extensions>=3.7.4.3
+[2024-02-23 06:36:51,922] {process_utils.py:168} INFO -   Using cached typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+[2024-02-23 06:36:52,043] {process_utils.py:168} INFO - Collecting six>=1.5
+[2024-02-23 06:36:52,047] {process_utils.py:168} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-02-23 06:36:52,113] {process_utils.py:168} INFO - Installing collected packages: six, typing-extensions, python-dateutil, kafka-python, Faker
+[2024-02-23 06:36:57,925] {process_utils.py:168} INFO - Successfully installed Faker-14.2.1 kafka-python-2.0.2 python-dateutil-2.8.2 six-1.16.0 typing-extensions-4.1.1
+[2024-02-23 06:36:58,535] {process_utils.py:160} INFO - Executing cmd: /tmp/venvp_cracgr/bin/python /tmp/venvp_cracgr/script.py /tmp/venvp_cracgr/script.in /tmp/venvp_cracgr/script.out /tmp/venvp_cracgr/string_args.txt
+[2024-02-23 06:36:58,546] {process_utils.py:164} INFO - Output:
+[2024-02-23 06:36:58,883] {process_utils.py:168} INFO - Kelly Palmer
+[2024-02-23 06:36:58,883] {process_utils.py:168} INFO - 18885 Veronica Centers
+[2024-02-23 06:36:58,883] {process_utils.py:168} INFO - Michellefurt, SC 91119
+[2024-02-23 06:36:58,883] {process_utils.py:168} INFO - 1983
+[2024-02-23 06:36:58,883] {process_utils.py:168} INFO - Finished
+[2024-02-23 06:36:59,303] {python.py:175} INFO - Done. Returned value was: None
+[2024-02-23 06:36:59,320] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=test_3_upadted, task_id=virtualenv_python, execution_date=20240223T063646, start_date=20240223T063648, end_date=20240223T063659
+[2024-02-23 06:36:59,353] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-02-23 06:36:59,391] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

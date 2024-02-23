@@ -1,0 +1,176 @@
+[2024-02-23 04:31:18,729] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: ETL_toll_data.python_task manual__2024-02-23T04:31:14.182654+00:00 [queued]>
+[2024-02-23 04:31:18,759] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: ETL_toll_data.python_task manual__2024-02-23T04:31:14.182654+00:00 [queued]>
+[2024-02-23 04:31:18,760] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 04:31:18,760] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2024-02-23 04:31:18,760] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-23 04:31:18,814] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): python_task> on 2024-02-23 04:31:14.182654+00:00
+[2024-02-23 04:31:18,856] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'ETL_toll_data', 'python_task', 'manual__2024-02-23T04:31:14.182654+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpdcjnycpq', '--error-file', '/tmp/tmp4g4er9x9']
+[2024-02-23 04:31:18,856] {standard_task_runner.py:77} INFO - Job 7: Subtask python_task
+[2024-02-23 04:31:18,830] {standard_task_runner.py:52} INFO - Started process 827 to run task
+[2024-02-23 04:31:19,009] {logging_mixin.py:109} INFO - Running <TaskInstance: ETL_toll_data.python_task manual__2024-02-23T04:31:14.182654+00:00 [running]> on host 5bc013e1bfce
+[2024-02-23 04:31:19,149] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=mahesh@somemail.com
+AIRFLOW_CTX_DAG_OWNER=Mahesh Pathak
+AIRFLOW_CTX_DAG_ID=ETL_toll_data
+AIRFLOW_CTX_TASK_ID=python_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-23T04:31:14.182654+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-23T04:31:14.182654+00:00
+[2024-02-23 04:31:19,150] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 13, in get_registerd_user
+    from faker import Faker
+ModuleNotFoundError: No module named 'faker'
+[2024-02-23 04:31:19,173] {taskinstance.py:1277} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_toll_data, task_id=python_task, execution_date=20240223T043114, start_date=20240223T043118, end_date=20240223T043119
+[2024-02-23 04:31:19,194] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,195] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,195] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,195] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,195] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,195] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,195] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,196] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,196] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,196] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,196] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,196] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-02-23 04:31:19,270] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/email.py:102: PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-02-23 04:31:19,270] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-02-23 04:31:19,270] {email.py:208} INFO - Email alerting: attempt 1
+[2024-02-23 04:31:19,279] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-02-23 04:31:19,279] {email.py:208} INFO - Email alerting: attempt 1
+[2024-02-23 04:31:19,279] {taskinstance.py:1751} ERROR - Failed to send email to: ['mahesh@somemail.com']
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 13, in get_registerd_user
+    from faker import Faker
+ModuleNotFoundError: No module named 'faker'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 2093, in email_alert
+    send_email(self.task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 66, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 102, in send_email_smtp
+    send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 210, in send_mime_email
+    conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 244, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.6/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1749, in handle_failure
+    self.email_alert(error)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 2095, in email_alert
+    send_email(self.task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 66, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 102, in send_email_smtp
+    send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 210, in send_mime_email
+    conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/email.py", line 244, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.6/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.6/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+[2024-02-23 04:31:19,346] {standard_task_runner.py:92} ERROR - Failed to execute job 7 for task python_task
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 13, in get_registerd_user
+    from faker import Faker
+ModuleNotFoundError: No module named 'faker'
+[2024-02-23 04:31:19,393] {local_task_job.py:154} INFO - Task exited with return code 1
+[2024-02-23 04:31:19,492] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
