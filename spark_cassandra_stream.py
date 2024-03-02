@@ -36,7 +36,7 @@ def insert_data(session, **kwargs):
     try:
         session.execute("""
             INSERT INTO spark_streams.created_users(name, address, created_at)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                VALUES (%s, %s, %s)
         """, (name, address, created_at))
         logging.info(f"Data inserted for {name}")
 
@@ -101,10 +101,6 @@ def create_selection_df_from_kafka(spark_df):
 
     sel = spark_df.selectExpr("CAST(value AS STRING)") \
         .select(from_json(col('value'), schema).alias('data')).select("data.*")
-    print(sel)
-    print()
-    print("Mahesh kafka from read")
-    print()
 
     return sel
 
