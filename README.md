@@ -8,7 +8,8 @@ A data pipeline with Docker, Airflow, Kafka, Spark Streaming, cassandra
 The project is a streaming data pipeline. It covers each stage from data ingestion to processing and finally to storage, utilizing a robust tech stack that includes Apache Airflow, Python, Apache Kafka, Apache Zookeeper, Apache Spark, and Cassandra.Everything is containerized using Docker for ease of deployment and scalability.
 
 ### Architecture
-![data_pipeline_project-architecture](images/System Architecture.jpg)
+![data_pipeline_project-architecture](https://github.com/mahesh-c-pathak/data_pipeline_project/blob/main/images/System%20Architecture.JPG)
+
 
 ### Tools & Technologies
 - Containerization - [**Docker**](https://www.docker.com), [**Docker Compose**](https://docs.docker.com/compose/)
