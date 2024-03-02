@@ -16,5 +16,6 @@ The project is a streaming data pipeline. It covers each stage from data ingesti
 - Stream Processing - [**Kafka**](https://kafka.apache.org), [**Spark Streaming**](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 - Orchestration - [**Airflow**](https://airflow.apache.org)
 - Language - [**Python**](https://www.python.org)
+- Data Warehouse - [**cassandra**](https://cassandra.apache.org/_/index.html)
 
 
